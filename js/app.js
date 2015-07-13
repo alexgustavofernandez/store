@@ -2,8 +2,12 @@
 
 angular.module('storeApp', [])
 
-  .controller('orderController', function($scope) {
+  .controller('orderController', ['$scope', '$rootScope', function($scope, $rootScope) {
 
+  $rootScope.test = function(url) {
+    var win = window.open(url, '_blank');
+    win ? win.focus() : null;
+  };
   $scope.options = [
     { label: '0', value: 0 },
     { label: '1', value: 1 },
@@ -16,5 +20,5 @@ angular.module('storeApp', [])
   $scope.myBed = $scope.options[0];
   $scope.myNightstand = $scope.options[0];
   $scope.myHammock = $scope.options[0];
-});
+}]);
 
