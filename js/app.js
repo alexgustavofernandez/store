@@ -1,8 +1,9 @@
+'use strict';
+
 angular.module('storeApp', [])
 
   .controller('orderController', function($scope) {
 
-      console.log("esto funciona");
   $scope.options = [
     { label: '0', value: 0 },
     { label: '1', value: 1 },
